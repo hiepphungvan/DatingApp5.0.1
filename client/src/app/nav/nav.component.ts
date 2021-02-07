@@ -26,12 +26,13 @@ export class NavComponent implements OnInit {
     this.accountService.login(this.model).subscribe(response =>{
       console.log(response);
       this.rounter.navigateByUrl('/members');
-    }, error=>{
-      console.log(error);
-      this.toastr.error(error.error);
-    });
-  }
-
+    }
+    // ,error=>{
+    //   console.log(error);
+    //   this.toastr.error(error.error);
+    // }
+  )
+}
   logout() {
     this.accountService.logout();
     this.rounter.navigateByUrl('/');
